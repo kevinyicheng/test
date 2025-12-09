@@ -3,134 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>郝健康專屬 - 無憂騎士保障計畫</title>
+    <title>專屬提案 - 陳O寓</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        /* 使用 Apple 系統字體，營造原生高級感 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background-color: #fbfbfd; }
+        
+        /* 多巴胺漸層色系定義 */
+        .grad-life { background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); } /* 金色系：生命價值 */
+        .grad-medical { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); } /* 藍色系：醫療科技 */
+        .grad-accident { background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); } /* 紅色系：速度與衝擊 */
+        .grad-kitty { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 綠色系：小額修復 */
+        .grad-text-main { background: linear-gradient(90deg, #1d1d1f 0%, #434344 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grad-price { background: linear-gradient(135deg, #0072ff 0%, #ff4b2b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Apple 風格的 Glassmorphism 卡片效果 */
+        .dopa-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .dopa-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        }
+        .icon-glow { filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.5)); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-[#1d1d1f] antialiased overflow-x-hidden">
 
-    <header class="gradient-bg text-white py-12 px-6 shadow-lg">
-        <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">致 追求速度與自由的你</h1>
-            <p class="text-lg opacity-90 mb-6">騎上重機是為了享受風的自由，而我們的任務，是確保這陣風永遠溫柔。</p>
-            <div class="inline-block bg-white text-blue-800 font-bold py-2 px-6 rounded-full shadow-md">
-                專屬客戶：郝健康 (29歲)
-            </div>
-        </div>
+    <header class="max-w-5xl mx-auto px-6 pt-24 pb-16 text-center relative">
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        
+        <h5 class="text-lg font-medium text-gray-500 mb-4 tracking-wide">專屬提案 Presentation For</h5>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 grad-text-main leading-tight">
+            陳O寓。
+        </h1>
+        <p class="text-2xl md:text-3xl font-semibold text-[#1d1d1f] mb-8">
+            為速度加冕，<br class="md:hidden">為自由繫上隱形安全帶。
+        </p>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            29歲的黃金騎士，追求風的同時，我們確保這陣風永遠溫柔。這是一份為你的熱血與夢想量身打造的鋼鐵防護計畫。
+        </p>
     </header>
 
-    <section class="max-w-3xl mx-auto py-10 px-6">
-        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
-            <h2 class="text-xl font-bold text-red-600 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>騎士的隱形風險</h2>
-            <p class="text-gray-600 leading-relaxed">
-                29歲是體況最好的黃金期，但熱愛重機的你，面臨的道路風險比一般人更高。
-                <br><br>
-                過去的保單中斷了沒關係，最重要的是<strong>現在</strong>。當意外發生（如骨折需植入鈦合金鋼板、長時間復健無法工作），
-                若是沒有足夠的<strong>「實支實付」</strong>與<strong>「意外險」</strong>，龐大的醫療費將會吃掉你的積蓄與夢想。
+    <section class="max-w-5xl mx-auto px-6 pb-24 relative z-10">
+        <h2 class="text-3xl font-bold text-center mb-12 text-[#1d1d1f]">第一階段：建構你的鋼鐵防護網</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-2 grad-medical"></div>
+                <div class="mb-6 relative">
+                    <div class="w-16 h-16 rounded-2xl grad-medical flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-microscope text-3xl text-white icon-glow"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">高規醫療實支實付</h3>
+                <p class="text-sm font-medium text-blue-600 mb-4">代號：佳實在 (HSV2)</p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    針對車禍常見的高額自費項目（如鈦合金鋼板、特殊醫材），提供實報實銷的火力支援。
+                </p>
+                 <ul class="space-y-3 text-gray-700 font-medium">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3 text-lg"></i>解決高科技手術/醫材費</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3 text-lg"></i>升級單人病房靜養</li>
+                </ul>
+            </div>
+
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-2 grad-accident"></div>
+                <div class="mb-6 relative">
+                     <div class="w-16 h-16 rounded-2xl grad-accident flex items-center justify-center shadow-lg shadow-red-500/30">
+                        <i class="fas fa-motorcycle text-3xl text-white icon-glow transform -rotate-12"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">騎士專屬意外強化</h3>
+                <p class="text-sm font-medium text-red-600 mb-4">代號：享安寶 (ADG) + 骨力勇 (ADH)</p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    為熱愛重機的你特別加強。針對骨折提供額外高倍數理賠，並保障因意外導致的長期失能。
+                </p>
+                 <ul class="space-y-3 text-gray-700 font-medium">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-3 text-lg"></i>特定骨折加倍給付</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-3 text-lg"></i>意外失能生活扶助金</li>
+                </ul>
+            </div>
+
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1">
+                <div class="absolute top-0 left-0 w-full h-2 grad-life"></div>
+                <div class="mb-6 relative">
+                     <div class="w-16 h-16 rounded-2xl grad-life flex items-center justify-center shadow-lg shadow-yellow-500/30">
+                        <i class="fas fa-heartbeat text-3xl text-white icon-glow"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">生命價值金庫</h3>
+                <p class="text-sm font-medium text-yellow-600 mb-4">代號：金來寶 (OLA5)</p>
+                 <p class="text-gray-600 leading-relaxed mb-4">
+                    這是對家人最基本的責任與承諾，將你對家庭的愛實體化，同時隨著時間累積保單價值。
+                </p>
+            </div>
+
+             <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1">
+                <div class="absolute top-0 left-0 w-full h-2 grad-kitty"></div>
+                <div class="mb-6 relative">
+                    <div class="w-16 h-16 rounded-2xl grad-kitty flex items-center justify-center shadow-lg shadow-green-500/30">
+                        <i class="fas fa-band-aid text-3xl text-white icon-glow"></i>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">意外醫療小撲滿</h3>
+                <p class="text-sm font-medium text-emerald-600 mb-4">代號：享安寶醫療 (TMR)</p>
+                 <p class="text-gray-600 leading-relaxed mb-4">
+                    日常的跌打損傷、換藥包紮。不用住院也能申請理賠，補貼掛號費與雜支。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-6 pb-24 text-center relative z-10">
+        <div class="bg-white/70 backdrop-blur-xl rounded-[3rem] p-12 shadow-2xl border border-white/50">
+            <h3 class="text-xl font-medium text-gray-500 mb-2">目前規劃年繳保費 (優惠後)</h3>
+            <div class="text-6xl md:text-7xl font-black grad-price mb-6 tracking-tight">
+                <span class="text-4xl align-top">NT$</span> 23,597
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                 <span class="px-6 py-3 bg-gray-100 text-gray-700 rounded-full font-medium text-sm flex items-center">
+                    <i class="fas fa-calculator mr-2"></i> 平均每月約 $1,966
+                </span>
+                <span class="px-6 py-3 bg-blue-50 text-blue-700 rounded-full font-medium text-sm flex items-center">
+                    <i class="fas fa-credit-card mr-2"></i> 信用卡分期 0 利率
+                </span>
+            </div>
+            <p class="text-gray-500 font-medium">
+                每月少少的錢，換來整年的安全感。
             </p>
         </div>
     </section>
 
-    <section class="max-w-3xl mx-auto py-6 px-6">
-        <h2 class="text-2xl font-bold text-center mb-8 text-gray-800">第一階段：建立鋼鐵防護網</h2>
-        
+    <section class="max-w-4xl mx-auto px-6 pb-32 text-center">
+        <h2 class="text-2xl font-bold mb-12 text-[#1d1d1f] flex items-center justify-center">
+            <span class="w-12 h-1 bg-gray-200 rounded-full mr-4"></span>
+            未來升級藍圖 (建議 30-35歲)
+            <span class="w-12 h-1 bg-gray-200 rounded-full ml-4"></span>
+        </h2>
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-100 p-3 rounded-full text-blue-600 mr-4">
-                        <i class="fas fa-user-md text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg">高規醫療實支實付</h3>
+            <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 text-left flex items-start opacity-70 hover:opacity-100 transition-opacity">
+                <div class="bg-purple-100 p-3 rounded-2xl mr-4">
+                    <i class="fas fa-brain text-purple-600 text-xl"></i>
                 </div>
-                <p class="text-sm text-gray-500 mb-2">對應項目：佳實在 (HSV2)</p>
-                <ul class="text-sm space-y-2 text-gray-700">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i><strong>解決高額自費醫材：</strong> 車禍手術常見的鋼釘、人工關節、自費藥物，實報實銷。</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i><strong>升級病房品質：</strong> 讓你靜養時不受打擾。</li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                <div class="flex items-center mb-4">
-                    <div class="bg-orange-100 p-3 rounded-full text-orange-600 mr-4">
-                        <i class="fas fa-motorcycle text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg">騎士專屬意外強化</h3>
+                <div>
+                    <h4 class="font-bold text-lg text-[#1d1d1f]">重大傷病險</h4>
+                    <p class="text-sm text-gray-500 mt-2">針對癌症、心腦血管疾病提供一次金理賠。</p>
                 </div>
-                <p class="text-sm text-gray-500 mb-2">對應項目：享安寶 (ADG) + 骨力勇 (ADH)</p>
-                <ul class="text-sm space-y-2 text-gray-700">
-                    <li><i class="fas fa-check text-green-500 mr-2"></i><strong>特定骨折加倍：</strong> 針對四肢骨折提供額外理賠金。</li>
-                    <li><i class="fas fa-check text-green-500 mr-2"></i><strong>意外失能扶助：</strong> 若因嚴重車禍導致無法工作，提供生活備援金。</li>
-                </ul>
             </div>
-
-            <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                <div class="flex items-center mb-4">
-                    <div class="bg-gray-100 p-3 rounded-full text-gray-600 mr-4">
-                        <i class="fas fa-shield-alt text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg">責任壽險基石</h3>
+             <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 text-left flex items-start opacity-70 hover:opacity-100 transition-opacity">
+                <div class="bg-teal-100 p-3 rounded-2xl mr-4">
+                    <i class="fas fa-wheelchair text-teal-600 text-xl"></i>
                 </div>
-                <p class="text-sm text-gray-500 mb-2">對應項目：金來寶 (OLA5)</p>
-                <p class="text-sm text-gray-700">
-                    留愛不留債。作為主約，這是對家人最基本的責任與承諾，同時累積保單價值。
-                </p>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                <div class="flex items-center mb-4">
-                    <div class="bg-green-100 p-3 rounded-full text-green-600 mr-4">
-                        <i class="fas fa-file-invoice-dollar text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg">意外醫療小撲滿</h3>
-                </div>
-                <p class="text-sm text-gray-500 mb-2">對應項目：享安寶醫療 (TMR)</p>
-                <p class="text-sm text-gray-700">
-                    跌打損傷、甚至只是換藥包紮，不用住院也能理賠，補貼日常看診的小額支出。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-blue-50 py-8 mt-6">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h3 class="text-gray-600 mb-2">目前規劃年繳保費 (優惠後)</h3>
-            <div class="text-4xl font-bold text-blue-900 mb-4">NT$ 23,597</div>
-            <p class="text-sm text-gray-500">平均每月約 $1,966 | 相當於少改一個重機零件，換來全年安心</p>
-            
-            <div class="mt-6 flex justify-center gap-4 text-sm font-medium text-gray-600">
-                <span class="bg-white px-3 py-1 rounded shadow">年繳最划算</span>
-                <span class="bg-white px-3 py-1 rounded shadow">信用卡分期 0 利率</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-3xl mx-auto py-10 px-6">
-        <h2 class="text-xl font-bold mb-6 text-gray-800 border-l-4 border-blue-500 pl-3">第二階段：未來升級藍圖 (建議 30-35歲)</h2>
-        <div class="bg-white border border-gray-200 rounded-xl p-5 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-gray-200 text-xs font-bold px-2 py-1 text-gray-600">Next Step</div>
-            <div class="flex flex-col md:flex-row gap-4">
-                <div class="flex-1">
-                    <h4 class="font-bold text-lg text-gray-800">重大傷病險</h4>
-                    <p class="text-sm text-gray-600 mt-1">隨著年齡增長與工作壓力，針對癌症、心腦血管疾病提供一次金理賠。</p>
-                </div>
-                <div class="flex-1 border-t md:border-t-0 md:border-l border-gray-100 pt-4 md:pt-0 md:pl-4">
-                    <h4 class="font-bold text-lg text-gray-800">長照失能險</h4>
-                    <p class="text-sm text-gray-600 mt-1">若不幸需要長期他人照顧，避免拖垮家庭經濟，讓生活更有尊嚴。</p>
+                <div>
+                    <h4 class="font-bold text-lg text-[#1d1d1f]">長照失能險</h4>
+                    <p class="text-sm text-gray-500 mt-2">避免因疾病或意外需要長期照顧時，拖垮家庭經濟。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <p class="mb-4">保險不是為了改變生活，而是為了防止生活被改變。</p>
-        <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
-            預約詳細解說
-        </button>
+    <footer class="text-center py-12 text-gray-400 text-sm">
+        <p>© 2025 專業規劃. All rights reserved.</p>
+        <p class="mt-2">保險不是為了改變生活，而是為了防止生活被改變。</p>
     </footer>
 
 </body>

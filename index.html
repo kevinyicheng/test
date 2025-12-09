@@ -7,18 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* 使用 Apple 系統字體，營造原生高級感 */
+        /* Apple 系統字體 */
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background-color: #fbfbfd; }
         
-        /* 多巴胺漸層色系定義 */
-        .grad-life { background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); } /* 金色系：生命價值 */
-        .grad-medical { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); } /* 藍色系：醫療科技 */
-        .grad-accident { background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); } /* 紅色系：速度與衝擊 */
-        .grad-kitty { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 綠色系：小額修復 */
+        /* 多巴胺漸層色系 */
+        .grad-life { background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); }
+        .grad-medical { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
+        .grad-accident { background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%); }
+        .grad-kitty { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); }
         .grad-text-main { background: linear-gradient(90deg, #1d1d1f 0%, #434344 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .grad-price { background: linear-gradient(135deg, #0072ff 0%, #ff4b2b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* Apple 風格的 Glassmorphism 卡片效果 */
+        /* Glassmorphism 卡片 */
         .dopa-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
@@ -31,6 +31,32 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
         }
         .icon-glow { filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.5)); }
+        
+        /* 保額強調樣式 */
+        .amount-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 1.15rem; /* 稍微調整字體大小以適應兩行 */
+            letter-spacing: -0.025em;
+            margin: 1rem 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            white-space: nowrap;
+        }
+        
+        /* 備註標籤樣式 (憑正本收據) */
+        .note-tag {
+            font-size: 0.75rem;
+            color: #6b7280;
+            background-color: #f3f4f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body class="text-[#1d1d1f] antialiased overflow-x-hidden">
@@ -40,7 +66,7 @@
         
         <h5 class="text-lg font-medium text-gray-500 mb-4 tracking-wide">專屬提案 Presentation For</h5>
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 grad-text-main leading-tight">
-            陳O寓。
+            陳O寓
         </h1>
         <p class="text-2xl md:text-3xl font-semibold text-[#1d1d1f] mb-8">
             為速度加冕，<br class="md:hidden">為自由繫上隱形安全帶。
@@ -55,66 +81,104 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group">
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group text-center flex flex-col items-center">
                 <div class="absolute top-0 left-0 w-full h-2 grad-medical"></div>
                 <div class="mb-6 relative">
                     <div class="w-16 h-16 rounded-2xl grad-medical flex items-center justify-center shadow-lg shadow-blue-500/30">
                         <i class="fas fa-microscope text-3xl text-white icon-glow"></i>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">高規醫療實支實付</h3>
-                <p class="text-sm font-medium text-blue-600 mb-4">代號：佳實在 (HSV2)</p>
-                <p class="text-gray-600 leading-relaxed mb-4">
+                <h3 class="text-2xl font-bold mb-1">高規醫療實支實付</h3>
+                <p class="text-xs text-gray-400 mb-2 uppercase tracking-wider">代號：佳實在 (HSV2)</p>
+                
+                <div class="flex flex-col gap-2 w-full items-center my-2">
+                    <div class="amount-badge bg-blue-50 text-blue-600 border border-blue-100 mb-0 py-1 px-4 w-auto">
+                        病房費：2,000 元/日
+                    </div>
+                    <div class="amount-badge bg-blue-50 text-blue-600 border border-blue-100 mt-0 py-1 px-4 w-auto">
+                        醫療雜費：20 萬元/次
+                    </div>
+                </div>
+                
+                <div class="note-tag">
+                    <i class="fas fa-file-invoice-dollar mr-1.5"></i> 憑正本收據給付
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-4 text-sm mt-2">
                     針對車禍常見的高額自費項目（如鈦合金鋼板、特殊醫材），提供實報實銷的火力支援。
                 </p>
-                 <ul class="space-y-3 text-gray-700 font-medium">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3 text-lg"></i>解決高科技手術/醫材費</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-3 text-lg"></i>升級單人病房靜養</li>
+                 <ul class="space-y-3 text-gray-700 font-medium w-full text-sm">
+                    <li class="flex items-center justify-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i>解決高科技手術/醫材費</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i>升級單人病房靜養</li>
                 </ul>
             </div>
 
-            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group">
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group text-center flex flex-col items-center">
                 <div class="absolute top-0 left-0 w-full h-2 grad-accident"></div>
                 <div class="mb-6 relative">
                      <div class="w-16 h-16 rounded-2xl grad-accident flex items-center justify-center shadow-lg shadow-red-500/30">
                         <i class="fas fa-motorcycle text-3xl text-white icon-glow transform -rotate-12"></i>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">騎士專屬意外強化</h3>
-                <p class="text-sm font-medium text-red-600 mb-4">代號：享安寶 (ADG) + 骨力勇 (ADH)</p>
-                <p class="text-gray-600 leading-relaxed mb-4">
+                <h3 class="text-2xl font-bold mb-1">騎士專屬意外強化</h3>
+                <p class="text-xs text-gray-400 mb-2 uppercase tracking-wider">代號：享安寶 (ADG) + 骨力勇 (ADH)</p>
+                
+                <div class="flex flex-col gap-2 w-full items-center my-2">
+                    <div class="amount-badge bg-red-50 text-red-600 border border-red-100 mb-0 py-1 px-4 text-lg w-auto">
+                        意外身故/失能：200 萬元
+                    </div>
+                    <div class="amount-badge bg-red-50 text-red-600 border border-red-100 mt-0 py-1 px-4 text-lg w-auto">
+                        骨力勇骨折險：50 萬元
+                    </div>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-4 text-sm mt-2">
                     為熱愛重機的你特別加強。針對骨折提供額外高倍數理賠，並保障因意外導致的長期失能。
                 </p>
-                 <ul class="space-y-3 text-gray-700 font-medium">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-3 text-lg"></i>特定骨折加倍給付</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-red-500 mr-3 text-lg"></i>意外失能生活扶助金</li>
+                 <ul class="space-y-3 text-gray-700 font-medium w-full text-sm">
+                    <li class="flex items-center justify-center"><i class="fas fa-check-circle text-red-500 mr-2"></i>特定骨折加倍給付</li>
+                    <li class="flex items-center justify-center"><i class="fas fa-check-circle text-red-500 mr-2"></i>意外失能生活扶助金</li>
                 </ul>
             </div>
 
-            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1">
+            <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1 text-center flex flex-col items-center">
                 <div class="absolute top-0 left-0 w-full h-2 grad-life"></div>
                 <div class="mb-6 relative">
-                     <div class="w-16 h-16 rounded-2xl grad-life flex items-center justify-center shadow-lg shadow-yellow-500/30">
+                    <div class="w-16 h-16 rounded-2xl grad-life flex items-center justify-center shadow-lg shadow-yellow-500/30">
                         <i class="fas fa-heartbeat text-3xl text-white icon-glow"></i>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">生命價值金庫</h3>
-                <p class="text-sm font-medium text-yellow-600 mb-4">代號：金來寶 (OLA5)</p>
-                 <p class="text-gray-600 leading-relaxed mb-4">
+                <h3 class="text-2xl font-bold mb-1">生命價值金庫</h3>
+                <p class="text-xs text-gray-400 mb-2 uppercase tracking-wider">代號：金來寶 (OLA5)</p>
+                
+                <div class="amount-badge bg-yellow-50 text-yellow-600 border border-yellow-100">
+                    保額：30 萬元
+                </div>
+
+                 <p class="text-gray-600 leading-relaxed mb-4 text-sm">
                     這是對家人最基本的責任與承諾，將你對家庭的愛實體化，同時隨著時間累積保單價值。
                 </p>
             </div>
 
-             <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1">
+             <div class="dopa-card rounded-[2.5rem] p-8 relative overflow-hidden group md:col-span-2 lg:col-span-1 text-center flex flex-col items-center">
                 <div class="absolute top-0 left-0 w-full h-2 grad-kitty"></div>
                 <div class="mb-6 relative">
                     <div class="w-16 h-16 rounded-2xl grad-kitty flex items-center justify-center shadow-lg shadow-green-500/30">
                         <i class="fas fa-band-aid text-3xl text-white icon-glow"></i>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">意外醫療小撲滿</h3>
-                <p class="text-sm font-medium text-emerald-600 mb-4">代號：享安寶醫療 (TMR)</p>
-                 <p class="text-gray-600 leading-relaxed mb-4">
+                <h3 class="text-2xl font-bold mb-1">意外醫療小撲滿</h3>
+                <p class="text-xs text-gray-400 mb-2 uppercase tracking-wider">代號：享安寶醫療 (TMR)</p>
+                
+                <div class="amount-badge bg-emerald-50 text-emerald-600 border border-emerald-100 mb-2">
+                    保額：5 萬元
+                </div>
+                
+                 <div class="note-tag">
+                    <i class="fas fa-file-invoice-dollar mr-1.5"></i> 憑正本收據給付
+                </div>
+
+                 <p class="text-gray-600 leading-relaxed mb-4 text-sm mt-2">
                     日常的跌打損傷、換藥包紮。不用住院也能申請理賠，補貼掛號費與雜支。
                 </p>
             </div>
@@ -136,7 +200,7 @@
                 </span>
             </div>
             <p class="text-gray-500 font-medium">
-                每月少少的錢，換來整年的安全感。
+                相當於每月少改一個重機小零件，換來全年安心馳騁。
             </p>
         </div>
     </section>
@@ -148,8 +212,8 @@
             <span class="w-12 h-1 bg-gray-200 rounded-full ml-4"></span>
         </h2>
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 text-left flex items-start opacity-70 hover:opacity-100 transition-opacity">
-                <div class="bg-purple-100 p-3 rounded-2xl mr-4">
+            <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 flex flex-col items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                <div class="bg-purple-100 p-3 rounded-2xl mb-3">
                     <i class="fas fa-brain text-purple-600 text-xl"></i>
                 </div>
                 <div>
@@ -157,8 +221,8 @@
                     <p class="text-sm text-gray-500 mt-2">針對癌症、心腦血管疾病提供一次金理賠。</p>
                 </div>
             </div>
-             <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 text-left flex items-start opacity-70 hover:opacity-100 transition-opacity">
-                <div class="bg-teal-100 p-3 rounded-2xl mr-4">
+             <div class="bg-white rounded-3xl p-6 shadow-md border border-gray-100 flex flex-col items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                <div class="bg-teal-100 p-3 rounded-2xl mb-3">
                     <i class="fas fa-wheelchair text-teal-600 text-xl"></i>
                 </div>
                 <div>
@@ -170,7 +234,7 @@
     </section>
 
     <footer class="text-center py-12 text-gray-400 text-sm">
-        <p>© 2025 專業規劃. All rights reserved.</p>
+        <p>© 2023 郝健康專業規劃. All rights reserved.</p>
         <p class="mt-2">保險不是為了改變生活，而是為了防止生活被改變。</p>
     </footer>
 
